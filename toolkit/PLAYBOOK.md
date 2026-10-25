@@ -13,12 +13,17 @@ Vender eSIMs em **gapsim.com**. Toda publicação existe para levar a pessoa ao 
   URL pública: `https://raw.githubusercontent.com/md1orlandoarts-netizen/gap_arts/main/<AAAA-MM>/<arquivo>.jpg`
 
 ## Calendário (regra fixa)
-- 20 posts por mês no padrão **"posta, posta, folga"**: em um mês de 30 dias, publicar em todo dia `d` em que `d % 3 != 0`
-  (1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26, 28, 29). Nunca dois dias seguidos sem post.
-  Meses de 31 dias: o mesmo padrão; o dia 31 também é folga se o total já chegou a 20. Fevereiro: ajustar para 20 sem dois dias vazios seguidos.
-- Horários alternados: **10:00** e **18:00** America/New_York (picos medidos na Metricool; = 12h/20h Brasília no horário padrão).
-- Criar os posts de um mês **somente a partir do dia 1º desse mês** (a cota pode contar pela data de criação).
-- Antes de criar, conferir com `getScheduledPosts` o que já existe no mês para não duplicar nem estourar o limite.
+- **Limite: 20 publicações por mês** (plano gratuito da Metricool) — nunca ultrapassar.
+- Padrão **"posta, posta, folga"**: publicar em todo dia `d` do mês em que `d % 3 != 0`
+  (1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26, 28, 29) até completar 20. Nunca dois dias seguidos sem post.
+  Fevereiro: ajustar para 20 sem dois dias vazios seguidos.
+- Horários alternados: **10:00** e **18:00** America/New_York.
+- Outubro/2026 foi planejado à mão (ver `calendario/2026-10.csv`); o padrão começa em 2026-11-01.
+- **Registro oficial dos posts: `calendario/AAAA-MM.csv`** (data,hora,peca,fonte_imagem,gancho,metricool_uuid).
+  `getScheduledPosts` só mostra posts ainda não publicados, então o total do mês é contado por este arquivo.
+- **Produção diária (rolante):** toda manhã, agendar os posts de hoje e dos próximos 2 dias que ainda não estiverem no
+  calendário do mês, usando as imagens mais recentes do Drive (o ChatGPT envia ~5 por semana). Nunca criar posts de um mês
+  antes do dia 1º desse mês. Se não houver nada a fazer, encerrar sem mensagem.
 
 ## Preços (obrigatório antes de cada arte com preço)
 - Rodar `python3 check_prices.py` (lê os preços exibidos em gapsim.com).
