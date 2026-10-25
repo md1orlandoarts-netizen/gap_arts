@@ -1,0 +1,3 @@
+photos/*.jpg
+_tmp_*.html
+__pycache__/
