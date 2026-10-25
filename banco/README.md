@@ -1,10 +1,4 @@
 # Banco de imagens GAP
 
-Coloque aqui as imagens para as artes do Instagram (JPG ou PNG, de preferência verticais 4:5 ou quadradas, mínimo 1080 px de largura).
-
-- `banco/ia/` → imagens geradas por IA (marcadas como conteúdo de IA ao publicar, como o Instagram exige)
-- `banco/fotos/` → fotos próprias da GAP ou de clientes (com autorização)
-
-Como subir pelo site do GitHub: abra a pasta → **Add file → Upload files** → arraste as imagens → **Commit changes**.
-A tarefa mensal usa primeiro as imagens deste banco que ainda não foram usadas e completa com fotos reais de Pexels/Pixabay.
-Os arquivos deste banco nunca são alterados ou movidos. O uso de cada imagem é registrado em `banco/uso.csv`.
+As imagens do ChatGPT agora ficam na pasta **"Gap arts" do Google Drive** (repositório oficial desde 25/10/2026).
+Esta pasta do GitHub guarda apenas o registro de uso (`uso.csv`). A pasta `banco/ia/` está desativada.

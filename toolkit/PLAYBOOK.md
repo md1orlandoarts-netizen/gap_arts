@@ -38,7 +38,7 @@ Vender eSIMs em **gapsim.com**. Toda publicação existe para levar a pessoa ao 
 
 ## Padrão visual APROVADO pelo cliente (ver `2026-10/` e `variants_2026-10_ref.json`)
 - Imagem em tela cheia, linda e emocional: pessoas felizes, céu azul, destinos variados.
-- **Duas fontes, ALTERNADAS ao longo do mês** (decisão do cliente): imagens do ChatGPT em `banco/ia/` e fotos reais de bancos
+- **Duas fontes, ALTERNADAS ao longo do mês** (decisão do cliente): imagens do ChatGPT (pasta "Gap arts" no Google Drive) e fotos reais de bancos
   gratuitos (Pexels, Pixabay, Unsplash). Alternar post a post (IA, real, IA, real…), cerca de metade de cada.
 - **Imagens do ChatGPT: pasta "Gap arts" no Google Drive** (fluxo ChatGPT → Google Drive → Claude; validado em 25/10/2026).
   - Pasta: id `1lK0Qnaq0zqMDYtQBCtb-TljKDEcU5_Tc` (conta md1orlandoarts@gmail.com), compartilhada como "qualquer pessoa com o link: leitor".
@@ -46,9 +46,11 @@ Vender eSIMs em **gapsim.com**. Toda publicação existe para levar a pessoa ao 
   - Baixar cada arquivo com:
     `curl -sS -L -o arquivo "https://drive.usercontent.google.com/download?id=<FILE_ID>&export=download&confirm=t"`
     e conferir com PIL (tamanho ≥ 1000 px de largura). Converter PNG para JPEG (qualidade 95) antes de usar no `make_art.py`.
-  - `banco/ia/` no GitHub continua aceito como fonte secundária (o envio do GPT pelo GitHub corrompeu o primeiro teste).
+  - Esta pasta é o **repositório oficial** das imagens do ChatGPT (decisão do cliente em 25/10/2026). O GitHub NÃO é mais fonte
+    de imagens; ele só hospeda as artes finais para a Metricool. Ritmo do ChatGPT: **5 imagens inéditas por semana, aos domingos de manhã**.
+  - Toda imagem nova nesta pasta pode ser usada no fluxo normal (temas: famílias, aeroportos, Disney/parques, Europa, estradas, lifestyle).
   - Nomes esperados: `AAAA-MM-NN-tema.png/jpg`, fotografias puras (sem texto/logos), verticais, espaço livre no terço inferior.
-  - **Nunca alterar, mover, renomear ou apagar** arquivos da pasta do Drive nem de `banco/ia/`. Registrar o uso em `banco/uso.csv`
+  - **Nunca alterar, mover, renomear ou apagar** arquivos da pasta do Drive. Registrar o uso em `banco/uso.csv`
     (colunas: arquivo,data_post,hora_post,gancho — para o Drive, use `drive:<FILE_ID>:<nome>` em "arquivo") e nunca reutilizar
     um arquivo já listado ali. Ignorar arquivos com "teste" no nome, exceto se o cliente pedir.
   - Usar primeiro os arquivos do mês corrente; depois os de meses anteriores ainda não usados.
