@@ -35,11 +35,17 @@ Vender eSIMs em **gapsim.com**. Toda publicação existe para levar a pessoa ao 
 - Imagem em tela cheia, linda e emocional: pessoas felizes, céu azul, destinos variados.
 - **Duas fontes, ALTERNADAS ao longo do mês** (decisão do cliente): imagens do ChatGPT em `banco/ia/` e fotos reais de bancos
   gratuitos (Pexels, Pixabay, Unsplash). Alternar post a post (IA, real, IA, real…), cerca de metade de cada.
-- `banco/ia/`: abastecido pelo ChatGPT (fluxo ChatGPT → GitHub → Claude). Meta do ChatGPT: 20 imagens inéditas por mês,
-  nomes no padrão `AAAA-MM-NN-tema.jpg`, fotografias puras (sem texto/logos), verticais ≥ 1024×1536, espaço livre no terço inferior.
-  - Uma imagem só conta como entregue se estiver de fato no repositório (`git pull` antes de usar).
-  - **Nunca alterar, mover, renomear ou apagar** arquivos de `banco/ia/`. Registrar o uso em `banco/uso.csv`
-    (colunas: arquivo,data_post,hora_post,gancho) e nunca reutilizar um arquivo já listado ali.
+- **Imagens do ChatGPT: pasta "Gap arts" no Google Drive** (fluxo ChatGPT → Google Drive → Claude; validado em 25/10/2026).
+  - Pasta: id `1lK0Qnaq0zqMDYtQBCtb-TljKDEcU5_Tc` (conta md1orlandoarts@gmail.com), compartilhada como "qualquer pessoa com o link: leitor".
+  - Listar com o conector Google Drive: `search_files` com `parentId = '1lK0Qnaq0zqMDYtQBCtb-TljKDEcU5_Tc' and mimeType contains 'image/'`.
+  - Baixar cada arquivo com:
+    `curl -sS -L -o arquivo "https://drive.usercontent.google.com/download?id=<FILE_ID>&export=download&confirm=t"`
+    e conferir com PIL (tamanho ≥ 1000 px de largura). Converter PNG para JPEG (qualidade 95) antes de usar no `make_art.py`.
+  - `banco/ia/` no GitHub continua aceito como fonte secundária (o envio do GPT pelo GitHub corrompeu o primeiro teste).
+  - Nomes esperados: `AAAA-MM-NN-tema.png/jpg`, fotografias puras (sem texto/logos), verticais, espaço livre no terço inferior.
+  - **Nunca alterar, mover, renomear ou apagar** arquivos da pasta do Drive nem de `banco/ia/`. Registrar o uso em `banco/uso.csv`
+    (colunas: arquivo,data_post,hora_post,gancho — para o Drive, use `drive:<FILE_ID>:<nome>` em "arquivo") e nunca reutilizar
+    um arquivo já listado ali. Ignorar arquivos com "teste" no nome, exceto se o cliente pedir.
   - Usar primeiro os arquivos do mês corrente; depois os de meses anteriores ainda não usados.
   - Conferir cada imagem antes de usar: rejeitar rostos plásticos, mãos erradas, texto/logos visíveis ou baixa resolução
     (registrar a rejeição em `banco/uso.csv` com gancho = "REJEITADA: motivo").
