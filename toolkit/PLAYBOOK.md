@@ -32,14 +32,20 @@ Vender eSIMs em **gapsim.com**. Toda publicação existe para levar a pessoa ao 
 - Nunca inventar desconto, oferta, cobertura ou compatibilidade.
 
 ## Padrão visual APROVADO pelo cliente (ver `2026-10/` e `variants_2026-10_ref.json`)
-- Imagem em tela cheia, linda e emocional: pessoas felizes, céu azul, destinos variados (EUA, Europa, praia, neve,
-  cidades, natureza, família, casal, amigos, viajante solo). Fontes, nesta ordem:
-  1) `banco/ia/` e `banco/fotos/` deste repositório (imagens enviadas pelo cliente, inclusive geradas por IA — o cliente
-     aprovou o uso de IA desde que a imagem seja realista e bonita, no nível do @md1travelco);
-  2) fotos reais gratuitas de Pexels, Pixabay ou Unsplash.
-  Mesclar as fontes ao longo do mês. Ao usar uma imagem do banco, movê-la para `banco/usadas/`.
-  Post com imagem de IA: `instagramData.isAiGenerated = true` (exigência do Instagram). Foto real: `false`.
-  Rejeitar imagens com cara de IA ruim (rostos plásticos, mãos erradas, texto deformado).
+- Imagem em tela cheia, linda e emocional: pessoas felizes, céu azul, destinos variados.
+- **Fonte principal: `banco/ia/`**, abastecido pelo ChatGPT (fluxo ChatGPT → GitHub → Claude). Meta: 20 imagens inéditas por mês,
+  nomes no padrão `AAAA-MM-NN-tema.jpg`, fotografias puras (sem texto/logos), verticais ≥ 1024×1536, espaço livre no terço inferior.
+  - Uma imagem só conta como entregue se estiver de fato no repositório (`git pull` antes de usar).
+  - **Nunca alterar, mover, renomear ou apagar** arquivos de `banco/ia/`. Registrar o uso em `banco/uso.csv`
+    (colunas: arquivo,data_post,hora_post,gancho) e nunca reutilizar um arquivo já listado ali.
+  - Usar primeiro os arquivos do mês corrente; depois os de meses anteriores ainda não usados.
+  - Conferir cada imagem antes de usar: rejeitar rostos plásticos, mãos erradas, texto/logos visíveis ou baixa resolução
+    (registrar a rejeição em `banco/uso.csv` com gancho = "REJEITADA: motivo").
+  - Post com imagem do banco de IA: `instagramData.isAiGenerated = true` (exigência do Instagram).
+  - Imagens de Disney/parques: evitar castelos, personagens e logos reconhecíveis em anúncios pagos; em posts orgânicos o cliente aceita.
+- `banco/fotos/`: fotos próprias da GAP (isAiGenerated = false).
+- Fotos de bancos gratuitos (Pexels, Pixabay, Unsplash): **não usar como substitutas das imagens prometidas pelo ChatGPT.**
+  Se o banco tiver menos imagens válidas do que os posts do mês, seguir a regra definida pelo cliente em "Falta de imagens" abaixo.
 - Tratamento de cor: `python3 grade.py foto.jpg photos/g_foto.jpg` (saturação realçada, céu mais azul).
 - Moldura arco-íris nas cores da GAP, logo original no canto (arquivo `gap_logo_original.png`, nunca alterar),
   selo amarelo de preço, título Montserrat 900 com segunda linha em amarelo, subtítulo, 2–3 tags, botão branco com CTA, "gapsim.com".
@@ -54,6 +60,10 @@ Vender eSIMs em **gapsim.com**. Toda publicação existe para levar a pessoa ao 
 - `WebSearch` com `allowed_domains: ["pexels.com"]` ou `["pixabay.com"]`, ex.: "happy family beach vacation", "couple New York sunny".
 - Baixar: `https://images.pexels.com/photos/<ID>/pexels-photo-<ID>.jpeg?auto=compress&cs=tinysrgb&w=2000`
 - Montar uma folha de contato e escolher as melhores (rostos felizes, luz bonita, céu azul). Não repetir fotos de meses anteriores.
+
+## Falta de imagens
+Regra provisória até o cliente decidir: agendar apenas os posts que tiverem imagem válida do banco, manter o padrão
+"posta, posta, folga" para esses, e avisar o cliente no resumo quantas imagens faltaram. Não completar com fotos da internet.
 
 ## Variedade de ganchos (rodar entre eles; não repetir a mesma mensagem no mês)
 Desembarque conectado · compartilhar ao vivo com quem ficou · família segura e conectada · mapa/transporte/Uber sem Wi-Fi ·

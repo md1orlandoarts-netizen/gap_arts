@@ -7,4 +7,4 @@ Coloque aqui as imagens para as artes do Instagram (JPG ou PNG, de preferência 
 
 Como subir pelo site do GitHub: abra a pasta → **Add file → Upload files** → arraste as imagens → **Commit changes**.
 A tarefa mensal usa primeiro as imagens deste banco que ainda não foram usadas e completa com fotos reais de Pexels/Pixabay.
-Depois de usada, a imagem é movida para `banco/usadas/` para não se repetir.
+Os arquivos deste banco nunca são alterados ou movidos. O uso de cada imagem é registrado em `banco/uso.csv`.
