@@ -1,0 +1,30 @@
+{
+ "01": {
+  "IMG": "ia_veneza.jpg",
+  "POS": "50% 28%",
+  "SHADEH": 760,
+  "H1": 104,
+  "SEALB": 700,
+  "CHIP": "eSIM Europa",
+  "SEALTOP": "Europa a<br>partir de",
+  "PRICE": "31",
+  "H1TXT": "Veneza hoje.<br><em>Roma amanhã.</em>",
+  "SUB": "Um só eSIM Europa para a viagem toda — sem caçar Wi-Fi a cada cidade.",
+  "TAGS": "<span>Não muda seu número</span><span>Ativação ao chegar</span><span>100% digital</span>",
+  "CTA": "Compre pelo link da bio"
+ },
+ "02": {
+  "IMG": "g_p13802164.jpg",
+  "POS": "76% 30%",
+  "SHADEH": 760,
+  "H1": 100,
+  "SEALB": 700,
+  "CHIP": "eSIM Pro USA",
+  "SEALTOP": "Pro USA a<br>partir de",
+  "PRICE": "40",
+  "H1TXT": "Reunião em NY.<br><em>E-mail em dia.</em>",
+  "SUB": "Chamadas, mapas e e-mail sem depender do Wi-Fi do hotel.",
+  "TAGS": "<span>Internet sem corte*</span><span>Não muda seu número</span><span>1 a 30 dias</span>",
+  "CTA": "Garanta antes de embarcar"
+ }
+}
