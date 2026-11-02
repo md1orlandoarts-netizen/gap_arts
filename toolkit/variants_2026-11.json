@@ -26,5 +26,19 @@
   "SUB": "Chamadas, mapas e e-mail sem depender do Wi-Fi do hotel.",
   "TAGS": "<span>Internet sem corte*</span><span>Não muda seu número</span><span>1 a 30 dias</span>",
   "CTA": "Garanta antes de embarcar"
+ },
+ "03": {
+  "IMG": "ia_aeroporto.jpg",
+  "POS": "50% 0%",
+  "SHADEH": 720,
+  "H1": 96,
+  "SEALB": 700,
+  "CHIP": "eSIM Pro USA",
+  "SEALTOP": "Pro USA a<br>partir de",
+  "PRICE": "40",
+  "H1TXT": "Férias chegando.<br><em>eSIM já no celular.</em>",
+  "SUB": "Instale antes de embarcar e ative ao chegar nos EUA — a família toda online desde o aeroporto.",
+  "TAGS": "<span>Internet sem corte*</span><span>Não muda seu número</span><span>1 a 30 dias</span>",
+  "CTA": "Compre pelo link da bio"
  }
 }
