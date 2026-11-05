@@ -14,15 +14,20 @@ Vender eSIMs em **gapsim.com**. Toda publicação existe para levar a pessoa ao 
 
 ## Calendário (regra fixa)
 - **Limite: 20 publicações por mês** (plano gratuito da Metricool) — nunca ultrapassar.
-- Padrão **"posta, posta, folga"**: publicar em todo dia `d` do mês em que `d % 3 != 0`
-  (1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26, 28, 29) até completar 20. Nunca dois dias seguidos sem post.
-  Fevereiro: ajustar para 20 sem dois dias vazios seguidos.
-- Horários alternados: **10:00** e **18:00** America/New_York.
-- Outubro/2026 foi planejado à mão (ver `calendario/2026-10.csv`); o padrão começa em 2026-11-01.
+- **Grade definitiva (aprovada pelo cliente em 05/11/2026): segunda a sexta, 1 post por dia, às 10:00 America/New_York.**
+  Motivo: no "melhor horário" da Metricool para o @gapcel, 10:00 é o pico em todos os dias úteis
+  (sex 6.734, qua 6.506, qui 6.275, seg 5.528, ter 4.942) e fica acima das 18:00; sábado (3.409) e domingo (2.582)
+  rendem metade ou menos → **sem post no fim de semana**. Bate com o envio do ChatGPT (~5 artes por semana).
+- Fechar **exatamente 20 por mês**: liste os dias úteis do mês; se passar de 20, retire terças-feiras (dia útil mais fraco),
+  começando pela última terça do mês, até ficar com 20. Se faltar (mês com menos de 20 dias úteis), complete com sábados às 10:00.
+- **Novembro/2026 (transição):** já publicados 01/11 18:00, 02/11, 04/11 18:00 e 05/11 (4 posts). Restantes, às 10:00:
+  06, 09, 10, 11, 12, 13, 16, 17, 18, 19, 20, 23, 24, 25, 26, 27 (16 posts → total 20). 30/11 fica sem post.
+- Histórico: outubro/2026 foi planejado à mão (`calendario/2026-10.csv`); de 01 a 05/11/2026 valeu o antigo "posta, posta, folga" 10:00/18:00.
 - **Registro oficial dos posts: `calendario/AAAA-MM.csv`** (data,hora,peca,fonte_imagem,gancho,metricool_uuid).
   `getScheduledPosts` só mostra posts ainda não publicados, então o total do mês é contado por este arquivo.
-- **Produção diária (rolante):** toda manhã, agendar os posts de hoje e dos próximos 2 dias que ainda não estiverem no
-  calendário do mês, usando as imagens mais recentes do Drive (o ChatGPT envia ~5 por semana). Nunca criar posts de um mês
+- **Produção diária:** todo dia, preencher os próximos dias da grade (a partir de amanhã, ou de hoje se ainda não passou
+  das 10:00) que ainda não estiverem no calendário do mês, um por arte inédita disponível no Drive, do mais antigo para o mais
+  novo, até acabarem as artes ou os dias da grade do mês. Assim a agenda fica sempre adiantada. Nunca criar posts de um mês
   antes do dia 1º desse mês. Se não houver nada a fazer, encerrar sem mensagem.
 
 ## Preços (obrigatório antes de cada arte com preço)
